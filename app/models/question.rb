@@ -1,4 +1,4 @@
 class Question < ApplicationRecord
-  has_many :user_questions
-  has_many :users, through: :user_questions
+  belongs_to :user_question
+  belongs_to :user, through: :user_question
 end
